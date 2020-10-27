@@ -1,0 +1,31 @@
+{
+    "name": "aria2local",
+    "version": "0.1.0",
+    "description": "",
+    "author": "staugur <me@tcw.im>",
+    "main": "src/index.js",
+    "scripts": {
+        "dev": "NODE_ENV=development nodemon src/index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/staugur/aria2local.git"
+    },
+    "keywords": [
+        "aria2",
+        "download",
+        "download-proxy"
+    ],
+    "license": "BSD-3-Clause",
+    "bugs": {
+        "url": "https://github.com/staugur/aria2local/issues"
+    },
+    "homepage": "https://github.com/staugur/aria2local#readme",
+    "dependencies": {
+        "ws": "^7.3.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.5"
+    }
+}
