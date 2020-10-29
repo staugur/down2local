@@ -1,29 +1,31 @@
 {
-    "name": "aria2local",
+    "name": "down2local",
     "version": "0.1.0",
     "description": "",
     "author": "staugur <me@tcw.im>",
-    "main": "src/index.js",
+    "main": "index.js",
     "scripts": {
-        "dev": "NODE_ENV=development nodemon src/index.js",
+        "dev": "NODE_ENV=development nodemon index.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/staugur/aria2local.git"
+        "url": "git+https://github.com/staugur/down2local.git"
     },
     "keywords": [
         "aria2",
+        "wget",
+        "http-get",
         "download",
         "download-proxy"
     ],
     "license": "BSD-3-Clause",
     "bugs": {
-        "url": "https://github.com/staugur/aria2local/issues"
+        "url": "https://github.com/staugur/down2local/issues"
     },
-    "homepage": "https://github.com/staugur/aria2local#readme",
+    "homepage": "https://github.com/staugur/down2local",
     "dependencies": {
-        "ws": "^7.3.1"
+        "simple-get": "^4.0.0"
     },
     "devDependencies": {
         "nodemon": "^2.0.5"
