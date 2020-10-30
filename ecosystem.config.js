@@ -9,13 +9,13 @@ let apps = [
         //general
         name: 'down2local',
         cwd: __dirname,
-        script: 'index.js', //启动执行的初始脚本
+        script: 'index.js',
         instances: 1, //'max'
         exec_mode: 'cluster',
 
         //advanced
-        watch: false, //监听文件变化
-        max_memory_restart: '512M', //内存达到多少会自动restart
+        watch: false,
+        max_memory_restart: '512M',
         env: ENV,
         out_file: 'logs/output.log',
         error_file: 'logs/error.log',

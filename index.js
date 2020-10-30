@@ -18,7 +18,6 @@ http.createServer((request, response) => {
     response.on('error', err => {
         console.error(err)
     })
-    console.debug(request.headers)
     let req = url.parse(request.url, true)
     if (req.pathname === '/get') {
         let downUrl = req.query.url
@@ -28,16 +27,15 @@ http.createServer((request, response) => {
                     response.end(err)
                 } else {
                     console.debug(res.headers)
+                    // prettier-ignore
+                    // eslint-disable-next-line max-len
+                    let ct = res.headers['content-type'] || 'application/octet-stream'
+                    let cl = res.headers['content-length']
+                    let cd = res.headers['content-disposition']
                     response.setHeader('Server', 'tcw/1.0')
-                    response.setHeader(
-                        'Content-Type',
-                        res.headers['content-type']
-                    )
-                    response.setHeader(
-                        'Content-Length',
-                        res.headers['content-length']
-                    )
-                    //res.setHeader("Content-Disposition", "attachment; filename="+encodeURI(imgName));
+                    if (ct) response.setHeader('Content-Type', ct)
+                    if (cl) response.setHeader('Content-Length', cl)
+                    if (cd) res.setHeader('Content-Disposition', cd)
                     res.pipe(response)
                 }
             })
