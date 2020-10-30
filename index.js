@@ -35,7 +35,7 @@ http.createServer((request, response) => {
                     response.setHeader('Server', 'tcw/1.0')
                     if (ct) response.setHeader('Content-Type', ct)
                     if (cl) response.setHeader('Content-Length', cl)
-                    if (cd) res.setHeader('Content-Disposition', cd)
+                    if (cd) response.setHeader('Content-Disposition', cd)
                     res.pipe(response)
                 }
             })

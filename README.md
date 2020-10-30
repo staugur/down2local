@@ -36,7 +36,7 @@ $ cd down2local
     $ sudo yarn global add forever # or local install with `yarn add forever`
     ```
 
-### 3. process manage
+### 3. process manager
 
 - 3.1 pm2
 
