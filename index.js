@@ -19,7 +19,7 @@ http.createServer((request, response) => {
         console.error(err)
     })
     let req = url.parse(request.url, true)
-    if (req.pathname === '/get') {
+    if (req.pathname.startsWith('/get')) {
         let downUrl = req.query.url
         if (!downUrl) downUrl = req.pathname.replace('/get/', '')
         console.debug(req.pathname)
