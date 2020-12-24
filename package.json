@@ -1,6 +1,6 @@
 {
     "name": "down2local",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Download transit program",
     "author": "staugur <me@tcw.im>",
     "main": "index.js",

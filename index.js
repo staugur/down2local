@@ -5,8 +5,8 @@ const url = require('url')
 const get = require('simple-get')
 const CFG = require('./config.json')
 
-const HOST = CFG.host || '127.0.0.1'
-const PORT = CFG.port || 5201
+const HOST = process.env.down2local_host || CFG.host || '127.0.0.1'
+const PORT = parseInt(process.env.down2local_port || CFG.port || 5201)
 const isURL = /(http|ftp|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?/
 
 http.createServer((request, response) => {

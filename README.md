@@ -52,6 +52,15 @@ cd down2local
     ```
 
 > App default listen on 127.0.0.1:5201, you can set it on config.json
+>
+> Run with Docker Image:
+>
+> `docker build -t down2local .`
+>
+> or
+>
+> `docker pull staugur/down2local`
+>
 
 ### 4. Nginx
 
