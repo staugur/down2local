@@ -22,7 +22,6 @@ http.createServer((request, response) => {
     if (req.pathname.startsWith('/get')) {
         let downUrl = req.query.url
         if (!downUrl) downUrl = req.pathname.replace('/get/', '')
-        console.debug(req.pathname)
         if (isURL.test(downUrl)) {
             get(downUrl, (err, res) => {
                 if (err) {

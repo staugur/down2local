@@ -21,7 +21,6 @@
         "url": "git+https://github.com/staugur/down2local.git"
     },
     "keywords": [
-        "aria2",
         "wget",
         "http-get",
         "download",
