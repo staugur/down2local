@@ -6,7 +6,7 @@ Download transit program to help you download remote resources through an interm
 
 ![down2local.png](https://static.saintic.com/picbed/staugur/2020/10/29/down2local.png!/fw/600)
 
-## Deploy(Production)
+## Deploy (Production)
 
 ### 1. download
 
@@ -39,6 +39,8 @@ cd down2local
 
 ### 3. process manager
 
+> App default listen on 127.0.0.1:5201, you can set it on config.json
+
 -   3.1 pm2
 
     ```bash
@@ -51,18 +53,22 @@ cd down2local
     yarn fe:[start/stop/restart]
     ```
 
-> App default listen on 127.0.0.1:5201, you can set it on config.json
->
-> Run with Docker Image:
->
-> `docker build -t down2local .`
->
-> or
->
-> `docker pull staugur/down2local`
->
+-   3.3 docker
 
-### 4. Nginx
+    - Build Docker Image:
+
+      ```bash
+      docker build -t down2local .
+      //or
+      docker pull staugur/down2local
+      ```
+
+    - Run Container
+      ```bash
+      docker run -d --name down2local --restart=always --net=host staugur/down2local
+      ```
+
+### 4. Nginx (optional)
 
 ```nginx
 server {
