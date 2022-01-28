@@ -32,7 +32,7 @@
     },
     "homepage": "https://github.com/staugur/down2local",
     "dependencies": {
-        "simple-get": "^4.0.0"
+        "simple-get": "^4.0.1"
     },
     "devDependencies": {
         "nodemon": "^2.0.5"
